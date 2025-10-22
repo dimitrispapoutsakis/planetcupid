@@ -12,7 +12,8 @@
     "preview": "rspeedy preview"
   },
   "dependencies": {
-    "@lynx-js/react": "^0.114.2"
+    "@lynx-js/react": "^0.114.2",
+    "@rsbuild/plugin-sass": "^1.4.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.3",
