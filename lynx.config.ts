@@ -17,14 +17,9 @@ export default defineConfig({
     pluginTypeCheck(),
     pluginSass(),
   ],
-  source: {
+  resolve: {
     alias: {
       '@': './src',
-      '@/components': './src/components',
-      '@/assets': './src/assets',
-      '@/utils': './src/utils',
-      '@/types': './src/types',
-      '@/hooks': './src/hooks',
     },
   },
 });

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for LynxJS */
+:root {
+  background-color: #000;
+  --color-text: #fff;
+}
+
+/* Base styles for LynxJS components */
+view {
+  display: flex;
+  flex-direction: column;
+}
+
+text {
+  color: var(--color-text);
+}
+
+image {
+  display: block;
+}
