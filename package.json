@@ -9,7 +9,9 @@
     "format": "biome format --write",
     "lint": "biome lint",
     "lint:fix": "biome lint --fix",
-    "preview": "rspeedy preview"
+    "preview": "rspeedy preview",
+    "ts": "tsc --noEmit",
+    "prepare": "husky"
   },
   "dependencies": {
     "@lynx-js/react": "^0.114.2",
@@ -24,6 +26,7 @@
     "@lynx-js/types": "3.4.11",
     "@rsbuild/plugin-type-check": "1.2.4",
     "@types/react": "^18.3.25",
+    "husky": "^9.1.7",
     "typescript": "~5.9.3"
   },
   "engines": {
