@@ -1,5 +1,4 @@
 import type { Config } from 'postcss-load-config';
-import lynxPreset from '@lynx-js/tailwind-preset';
 
 const config: Config = {
   plugins: {
