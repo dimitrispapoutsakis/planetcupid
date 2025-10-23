@@ -6,13 +6,7 @@ import { MemoryRouter, Routes, Route } from 'react-router';
 
 import { App } from '@/components/App/App';
 
-root.render(
-  <MemoryRouter initialEntries={['/']}>
-    <Routes>
-      <Route path="/" element={<App />} />
-    </Routes>
-  </MemoryRouter>
-);
+root.render(<App />);
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept();
