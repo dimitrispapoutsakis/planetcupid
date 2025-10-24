@@ -18,4 +18,5 @@ export interface IRoute {
   name: string;
   path: string;
   icon: string;
+  component: React.ComponentType<any>;
 }

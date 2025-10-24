@@ -4,9 +4,20 @@ import { root } from '@lynx-js/react';
 import './assets/scss/index.scss';
 import { MemoryRouter, Routes, Route } from 'react-router';
 
-import { App } from '@/components/App/App';
+import BottomBar from './components/BottomBar/BottomBar';
+import { routes } from './constants/routes';
 
-root.render(<App />);
+root.render(
+  <MemoryRouter>
+    <Routes>
+      {routes.map((route) => (
+        <Route key={route.path} path={route.path} element={<route.component />} />
+      ))}
+    </Routes>
+
+    <BottomBar />
+  </MemoryRouter>,
+);
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept();
