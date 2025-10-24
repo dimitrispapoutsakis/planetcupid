@@ -38,3 +38,27 @@
     filter: blur(0px);
   }
 }
+
+@keyframes slide-in-right {
+  0%, 50% {
+    transform: translate3d(20%, 0, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0%, 50% {
+    transform: translate3d(-20%, 0, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

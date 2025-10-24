@@ -16,7 +16,7 @@ const Item = ({ route, ...rest }: IItem) => {
   };
   
   return (
-    <view {...rest} bindtap={onPress}>
+    <view {...rest} bindtap={onPress} style={{padding: '1rem'}}>
       <image 
         src={route.icon}
         mode="scaleToFill"
