@@ -16,3 +16,25 @@
     opacity: 1;
   }
 }
+
+.grow-in {
+  animation: grow-in vars.$transition-duration-25 vars.$buttery-cubic-bezier both;
+}
+
+@keyframes grow-in {
+  0% {
+    transform: scale3d(0.95, 0.95, 0.95);
+    opacity: 0;
+    filter: blur(6px);
+  }
+  70% {
+    transform: scale3d(1.05, 1.05, 1.05);
+    opacity: 0.8;
+    filter: blur(2px);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
