@@ -1,5 +1,7 @@
 
+import type { MainThread } from '@lynx-js/types';
 import { useNavigate } from 'react-router';
+import { scaleIn } from '@/constants/animations';
 
 interface IItem {
   route: any;

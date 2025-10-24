@@ -1,0 +1,20 @@
+@use './variables.scss' as vars;
+
+.scale-in {
+  animation: scale-in vars.$transition-duration-25 vars.$buttery-cubic-bezier both;
+}
+
+@keyframes scale-in {
+  0%,
+  100% {
+    transform: scale3d(.8, .8, .8);
+    opacity: 1;
+    filter: blur(0px);
+  }
+
+  50% {
+    transform: scale3d(1, 1, 1);
+    opacity: 0;
+    filter: blur(10px);
+  }
+}
