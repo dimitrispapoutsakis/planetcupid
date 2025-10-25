@@ -32,6 +32,7 @@ export default defineConfig({
       plugins: [
         tanstackRouter({
           target: 'react',
+          autoCodeSplitting: false
         }),
       ],
     },

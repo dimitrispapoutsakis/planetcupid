@@ -10,19 +10,16 @@ import {
   RouterProvider,
 } from '@tanstack/react-router';
 
-import BottomBar from './components/BottomBar/BottomBar';
-import { routes } from './constants/routes';
-
-import { routeTree } from './routeTree.gen.js';
+import { routeTree } from './routeTree.gen';
 
 const memoryHistory = createMemoryHistory({
   initialEntries: ['/'],
 });
-
+ 
 const router = createRouter({
   routeTree,
   history: memoryHistory,
-  isServer: false,
+  isServer: false, // Set to false for LynxJS environment
 });
 
 export function App() {

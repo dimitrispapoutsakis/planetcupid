@@ -1,6 +1,6 @@
 
 import type { MainThread } from '@lynx-js/types';
-import { useNavigate } from 'react-router';
+import { useNavigate } from '@tanstack/react-router';
 import { scaleIn } from '@/constants/animations';
 
 interface IItem {
@@ -12,7 +12,7 @@ const Item = ({ route, ...rest }: IItem) => {
 
   const onPress = () => {
     // TODO: Add vibration and effects 
-    nav(route.path); 
+    nav({ to: route.path }); 
   };
   
   return (
