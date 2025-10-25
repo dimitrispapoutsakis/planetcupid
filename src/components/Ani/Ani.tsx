@@ -3,29 +3,28 @@ import styles from './Ani.module.scss';
 
 export interface IAni {
   children: React.ReactNode;
-  type?: TAniType;
-  duration?: number;
-  direction?: 'None' | 'In' | 'Out';
-  delay?: number;
-  easing?: string;
-  aniOnMount?: boolean;
+  initial: React.CSSProperties;
+  animate?: React.CSSProperties;
+  exit?: React.CSSProperties;
 }
 
-export type TAniType = 'slide' | 'scale';
-export type TAnimationState = 'Idle' | 'Enter' | 'Exit';
-
 export const Ani = (props: IAni) => {
-  const { children, type = 'slide', duration = 300, delay = 0, easing = 'ease-in-out', direction = 'In' } = props;
-  const [animationState, setAnimationState] = useState<TAnimationState>('Enter');
-  const aniClass = styles[`${type}${direction}${animationState}`]
-   
+  const { children, initial, animate = {}, exit } = props;
+  const [ aniStyle, setAniStyle ] = useState<React.CSSProperties>({
+    ...initial,
+    transition: 'all .25s ease',
+  });
+  
   useEffect(() => {
-    // setAnimationState('entering');
-  }, [aniClass]);
+    setAniStyle(prev => ({
+      ...prev,
+      ...animate,
+    }));
+  }, [animate]);
 
   return (
     // <view main-thread:global-bindlayoutchange={() => console.log('layoutchange')} className={aniClass}>
-    <view className={aniClass}>
+    <view style={aniStyle}>
       {children}
     </view>
   );
