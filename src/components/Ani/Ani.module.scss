@@ -1,0 +1,78 @@
+/* Timing Functions... */
+$buttery-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-duration-25: .25s;
+
+.scaleIn {
+  animation: scaleIn $transition-duration-25 $buttery-cubic-bezier both;
+}
+
+.growIn {
+  animation: growIn $transition-duration-25 $buttery-cubic-bezier both;
+}
+
+.slideInRight {
+  animation: slideInRight $transition-duration-25 $buttery-cubic-bezier both;
+}
+
+.slideInLeft {
+  animation: slideInLeft $transition-duration-25 $buttery-cubic-bezier both;
+}
+
+@keyframes scale-in {
+  0%,
+  50% {
+    transform: scale3d(.8, .8, .8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes growIn {
+  0% {
+    transform: scale3d(0.95, 0.95, 0.95);
+    opacity: 0;
+    filter: blur(6px);
+  }
+
+  70% {
+    transform: scale3d(1.05, 1.05, 1.05);
+    opacity: 0.8;
+    filter: blur(2px);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes slideInRight {
+  0%,
+  50% {
+    transform: translate3d(20%, 0, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0%,
+  50% {
+    transform: translate3d(-20%, 0, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
