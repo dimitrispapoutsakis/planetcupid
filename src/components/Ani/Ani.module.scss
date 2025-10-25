@@ -10,12 +10,12 @@ $transition-duration-25: .25s;
   animation: growIn $transition-duration-25 $buttery-cubic-bezier both;
 }
 
-.slideInRight {
-  animation: slideInRight $transition-duration-25 $buttery-cubic-bezier both;
+.slideInEnter {
+  animation: slideInEnter $transition-duration-25 $buttery-cubic-bezier both;
 }
 
-.slideInLeft {
-  animation: slideInLeft $transition-duration-25 $buttery-cubic-bezier both;
+.slideInExit {
+  animation: slideInExit $transition-duration-25 $buttery-cubic-bezier both;
 }
 
 @keyframes scale-in {
@@ -51,7 +51,7 @@ $transition-duration-25: .25s;
   }
 }
 
-@keyframes slideInRight {
+@keyframes slideInEnter {
   0%,
   50% {
     transform: translate3d(20%, 0, 0);
@@ -64,7 +64,7 @@ $transition-duration-25: .25s;
   }
 }
 
-@keyframes slideInLeft {
+@keyframes slideInExit {
   0%,
   50% {
     transform: translate3d(-20%, 0, 0);
